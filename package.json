@@ -1,0 +1,15 @@
+{
+  "name": "frida-setwindowband",
+  "version": "1.0.0",
+  "description": "Frida - Windows User32\\SetWindowBand",
+  "private": true,
+  "main": "main.js",
+  "devDependencies": {
+    "@types/frida-gum": "^17.1.0",
+    "@types/node": "^16.4.8",
+    "frida-compile": "^10.0.0"
+  },
+  "dependencies": {
+    "frida": "^15.1.6"
+  }
+}
