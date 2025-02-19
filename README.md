@@ -23,18 +23,32 @@ Run the following command in the [VS Code Terminal][vt] to install all required 
 pnpm install
 ```
 
-> [!NOTE]
-> Install an older version of [Node.js][node] if [Frida][frida] does not compile.
+<details>
+<summary>Expand if errors occur during installation of Frida.</summary>
+
+> First try 1️⃣, if it still does not work try 2️⃣.
+>
+> 1️⃣ Update Frida to the latest version.
+>
 > ```sh
-> # List remotely available Node.js versions:
+> # Update all dependencies to their latest versions.
+> pnpm update --latest
+> ```
+>
+> 2️⃣ Install an older version of [Node.js][node].
+>
+> ```sh
+> # List remotely available Node.js versions.
 > pnpm env list --remote
 >
-> # For example, install v22 if the latest version is v23:
+> # For example, install v22 if the latest version is v23.
 > pnpm env use 22.14.0 --global
 >
-> # This should trigger the compilation again.
+> # This should trigger the execution again.
 > pnpm update frida
 > ```
+
+</details>
 
 Run the following command in the [VS Code Terminal][vt] to start the script:
 
@@ -48,27 +62,27 @@ node . HWND BAND
 <details>
 <summary>Expand to view a table of ZBID values (window bands).</summary>
 
-| Value | Name |
-| :---: | --- |
-| 0 | ZBID_DEFAULT |
-| 1 | ZBID_DESKTOP |
-| 2 | ZBID_UIACCESS |
-| 3 | ZBID_IMMERSIVE_IHM |
-| 4 | ZBID_IMMERSIVE_NOTIFICATION |
-| 5 | ZBID_IMMERSIVE_APPCHROME |
-| 6 | ZBID_IMMERSIVE_MOGO |
-| 7 | ZBID_IMMERSIVE_EDGY |
-| 8 | ZBID_IMMERSIVE_INACTIVEMOBODY |
-| 9 | ZBID_IMMERSIVE_INACTIVEDOCK |
- 10 | ZBID_IMMERSIVE_ACTIVEMOBODY ||
-| 11 | ZBID_IMMERSIVE_ACTIVEDOCK |
-| 12 | ZBID_IMMERSIVE_BACKGROUND |
-| 13 | ZBID_IMMERSIVE_SEARCH |
-| 14 | ZBID_GENUINE_WINDOWS |
-| 15 | ZBID_IMMERSIVE_RESTRICTED |
-| 16 | ZBID_SYSTEM_TOOLS |
-| 17 | ZBID_LOCK |
-| 18 | ZBID_ABOVELOCK_UX |
+> | Value | Name |
+> | :---: | --- |
+> | 0 | ZBID_DEFAULT |
+> | 1 | ZBID_DESKTOP |
+> | 2 | ZBID_UIACCESS |
+> | 3 | ZBID_IMMERSIVE_IHM |
+> | 4 | ZBID_IMMERSIVE_NOTIFICATION |
+> | 5 | ZBID_IMMERSIVE_APPCHROME |
+> | 6 | ZBID_IMMERSIVE_MOGO |
+> | 7 | ZBID_IMMERSIVE_EDGY |
+> | 8 | ZBID_IMMERSIVE_INACTIVEMOBODY |
+> | 9 | ZBID_IMMERSIVE_INACTIVEDOCK |
+>  10 | ZBID_IMMERSIVE_ACTIVEMOBODY ||
+> | 11 | ZBID_IMMERSIVE_ACTIVEDOCK |
+> | 12 | ZBID_IMMERSIVE_BACKGROUND |
+> | 13 | ZBID_IMMERSIVE_SEARCH |
+> | 14 | ZBID_GENUINE_WINDOWS |
+> | 15 | ZBID_IMMERSIVE_RESTRICTED |
+> | 16 | ZBID_SYSTEM_TOOLS |
+> | 17 | ZBID_LOCK |
+> | 18 | ZBID_ABOVELOCK_UX |
 
 </details>
 
